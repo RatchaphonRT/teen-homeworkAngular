@@ -1,0 +1,28 @@
+<form [formGroup]="MovieForm" (ngSubmit)="submit()">
+    <div >
+             <input formControlName="movieId" (keyup)="submit()"style="margin-bottom: 1.5%;">
+            <app-child (movie)="MovieData($event)" [movieId]="movieId"></app-child>
+     </div>
+  </form>
+  
+<div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">NameMovie</th>
+            <th scope="col">TypeMovie</th>
+            <th scope="col">MoviePrice</th>
+            <th scope="col">Movieid</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr>
+            <td align="center">{{ movieName }}</td>
+            <td align="center">{{ movieType }}</td>
+            <td align="center">{{ moviePrice }}</td>
+            <td align="center">{{ movieName }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div> 
+      
